@@ -1,0 +1,37 @@
+/* Theme transition Effect */
+*:after,
+*:before,
+a,
+p,
+h1,h2,h3,h4,h5,h6,
+button,
+.gallery-hover,
+.overlay,
+.booking-form-bg img,
+.navigation li > ul,
+.layers-banner,
+.figure-hover,
+.categories-widget ul li,
+.figure-holder img,
+.social-icons ul li a,
+.sepcial-product img,
+.gallery-figure img,
+.team-detail,
+.team-column img,
+.social-icons ul li,
+.team.style-2 .team-column,
+.team-img,
+.slick-dots li,
+.service-icon
+{-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;}
+
+
+
+
+
+
+

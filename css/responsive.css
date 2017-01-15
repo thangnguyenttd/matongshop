@@ -1,0 +1,285 @@
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 1199px) {
+	.about-text p:last-child{ display: none;}
+	.about-text p{ width: 100%; line-height: 21px;}
+	.sepcial-product-detail{ padding: 12px;}
+	.sepcial-product-detail h4{ margin: 0 0 10px;}
+	.sepcial-product-detail .price{ font-size: 22px; margin: 0;}
+	.working-hours ul li p{ font-size: 14px;}
+	.logo-widget p{ font-size: 14px;}
+	.flicker-img li{ width: 28%;}
+
+	.about-services li{ min-height: 70px;}
+	.about-services li h3{ font-size: 13px; margin: 0 0 10px;}
+	.about-services li p{ font-size: 12px; line-height: 16px;}
+
+	.news-column.style-2 .news-detail h4{ font-size: 16px; margin: 0 0 10px;}
+	.news-column.style-2 .news-detail ul li{ font-size: 13px;}
+	.news-column.style-2 .news-detail p{ font-size: 13px; line-height: 21px;}
+
+	.booking-form-holder.style-3 .booking-form{ padding: 0;}
+	.booking-form-holder.style-3 .reservations-btn p{ font-size: 14px;}
+
+	.menu-overlay-wrap{ padding: 0;}
+
+	.item-details{ padding: 20px 30px;}
+	.item-details ul li h5::after{ display: none;}
+	.item-details{ width: 54%;}
+
+	.recipe-details p{ font-size: 13px; margin: 0 0 10px; padding: 0 0 10px;}
+	.ingrediants li{ font-size: 13px;}
+
+	.recipe-video iframe{ height: 417px;}
+
+	.product-holder .figure-holder{ margin: 0;}
+	.product-holder .figure-holder > img{ width: 100%;}
+
+	.single-product-detail p{ font-size: 13px; margin: 0 0 10px;}
+	.availability,
+	.single-product-detail h3,
+	.single-product-detail .rating-stars,
+	.single-product-detail h4{ margin: 0 0 10px;}
+	.reviews-list ul li .comment p{ font-size: 14px;}
+
+}
+
+@media (max-width: 991px) {
+	/* Navigation */
+	.navigation .nav-1,
+	.navigation .nav-2 { display: none; }
+	.header-2 .logo a {left: 15px; margin: 0;}
+	.menu-ico { display: inline-block;}
+	.contact-form { margin: 0 0 30px;}
+	.faq-warpper .side-bar { margin: 0 0 30px;}
+	.navigation.style-1{ margin: 0 30px 0 0;}
+	.menu-ico{ padding: 25px 0;}
+	.nh-nav{ display: none;}
+	.header.header-3 .menu-ico{ padding: 35px 0;}
+	/* Navigation */
+
+	.header.header-3 .logo img{ width: 100%;}
+	.logo img{ width: 67%;}
+	.search-bar a{ padding: 20px 0;}
+	.menu-ico{ padding: 16px 0;}
+
+	.about-text p:nth-child(3){ display: none;}
+	.about-text p{ width: 100%; line-height: 21px;}
+	.about-img iframe{ height: 210px;}
+
+	.newslatter p{ font-size: 15px;}
+	.client-say{ width: 80%;}
+
+	.news-column.style-2 .news-img{ margin: 0 0 20px;}
+	.news-column.style-2 .news-img > img{ width: 100%;}
+	.hidden-991{ display: none;}
+	.about-style-2{ padding: 80px 0;}
+
+	.caption.style-1 h1{ font-size: 40px;}
+	.facts-lsit ul li{ padding: 0 20px;}
+	.facts-lsit ul li h2{ font-size: 28px;}
+
+	.booking-form-holder.style-3{ padding: 0 0 80px;}
+
+	.video-banner .caption{ display: none;}
+
+	.blog-detail .figure-holder .figure-title{ padding: 10px 20px;}
+	.blog-gallery-slider .figure-title h3{ font-size: 16px; margin: 0 0 10px;}
+
+	.figure-holder{ margin: 0 0 20px;}
+	.related-products .inner-detail{ padding: 20px;}
+
+	.recipe-slider{ margin: 0 0 30px;}
+	.product-directions{ margin: 0 0 30px;}
+	.table-responsive{ border: 0;}
+	.detail-img-wrap{ padding: 40px 0 30px;}
+
+	.recipe-img-holder img{ width: 100%;}
+	.recipe-img-holder{ margin: 0 0 30px;}
+
+	.recipe-video{ margin: 0 0 30px;}
+	.recipe-video iframe{ height: 400px;}
+
+	.item-details{ min-width: 40%;}
+	.about-services li {padding: 0 0 0 85px;}
+	.about-services.icon-left li {padding: 0 85px 0 0;}
+}	
+
+@media (max-width: 800px){
+	.tp-caption.style-2 h1 {font-size: 40px;}
+	.tp-caption .btn { height: 35px!important; line-height: 35px!important; font-size: 14px!important}
+
+	.caption.style-1 h1{ font-size: 30px;}
+	.caption.style-1 p{ font-size: 14px;}
+}
+
+@media (max-width: 767px) {
+	.about-the-app{ padding: 0; overflow: hidden;}
+	.fooding-app{ padding: 80px 0;}
+	.reservations-btn p{ font-size: 14px;}
+	.menu-item{ padding: 0 0 0 115px;}
+	.menu-list .menu-item p{ font-size: 14px;}
+	.newslatter{ text-align: center;}
+	.newslatter p{ float: none; display: block; margin: 0 0 10px; line-height: 23px;}
+	.newslatter .subcribe{ float: none; display: inline-block;}
+
+	.about-the-app .btn-list li{ margin: 0 0 0 10px;}
+	.about-the-app .btn-list li:first-child{ margin: 0;}
+	.about-the-app .btn-list li .btn{ font-size: 10px; padding: 0 10px; height: 35px; line-height: 35px;}
+
+	.reservations-btn{ text-align: center;}
+	.reservations-btn p{ float: none!important;}
+	.reservations-btn .btn{ float: none!important;}
+	.form-control{ font-size: 11px;}
+
+	.nh-filterbale-nav ul li{ margin: 0 0 0 10px;}
+	.nh-filterbale-nav ul li a{ font-size: 12px; padding: 10px 4px;}
+
+	.top-bar{ display: none;}
+
+	.caption.style-1 h1{ font-size: 30px;}
+	.caption.style-1 p{ font-size: 14px;}
+
+	.facts-lsit ul li:nth-child(3){ border: 0;}
+	.facts-lsit ul li{ width: 50%; margin: 15px 0;}
+
+	.nh-sidebar{ margin: 50px 0 0;}
+	.product-desc p{ display: none;}
+
+	#comming-countdown{ margin: 0;}
+	#comming-countdown li{ margin: 0 0 0 30px;}
+
+	.contact-map{ margin: 40px 0 0!important;}
+	.item-details{ position: static; transform: scale(1); float: none!important;}
+
+	.recipe-video iframe{ height: 350px;}
+
+	.reviews-list{ margin: 0 0 30px;}
+
+	.pull-nono-640{ float: none!important;}
+	.item-details{ min-width: 95%; margin: 0 15px;}
+	.menu-overlay-wrap .figure-holder{ margin: 0;}
+	.about-services.icon-left li {text-align: left; padding: 0 0 0 85px;}
+	.about-services.icon-left li .service-icon {right: auto; left: 0;}
+	.about-services li .service-icon {top: -10px;}
+}	
+
+@media (max-width: 639px) {
+	.full-width-640{ width: 100%;}
+	.client-say{ width: 100%;}
+	.news-img > img{ width: 100%;}
+	.flicker-img ul{ width: 64%;}
+
+	.about-services.icon-left{ margin: 0 0 30px;}
+	.about-services.icon-left li{ padding: 0 0 0 100px; text-align: left;}
+	.about-services.icon-left li .service-icon{ left: 0; right: auto;}
+	.about-services li h3{ font-size: 14px;}
+	.about-services li p{ font-size: 14px; }
+	.about-services li{ padding: 0 0 0 100px; text-align: left;}
+
+	.main-heading h2{ font-size: 30px;}
+	.news-column.style-2{ margin: 0 0 30px;}
+
+	.caption.style-1 h1{ font-size: 20px; margin: 0 0 10px;}
+	.caption.style-1 p{ font-size: 12px; line-height: 20px;}
+	.btn{ font-size: 11px; line-height: 38px; height: 38px; padding: 0 20px;}
+
+	.comming-soon-wrap{ width: 100%;}
+	#comming-countdown li{ margin: 0 0 0 10px;}
+	#comming-countdown li span{ font-size: 20px;}
+
+	.nh-info{ margin: 0 0 30px;}
+	.recipe-video iframe{ height: 260px;}
+
+	.view-option{ display: inline-block;}
+	.sort-by{ float: none; display: inline-block;}
+
+	.regiter-form{ margin: 0 0 30px;}
+
+	.item-details{ min-width: 93%;}
+	.about-img{ margin: 0 0 20px;}
+	.about-img iframe { height: 280px; }
+}
+
+@media (max-width: 479px) {
+	.full-width-480{ width: 100%;}
+	.width-480-half { width: 50%; }
+	.slick-arrow{ top: -34px;}
+	.gallery-figure > img{ width: 100%;}
+	.nh-filterbale-nav ul li a{ font-size: 10px; padding: 10px 2px;}
+	.client-say blockquote{ font-size: 14px;}
+
+	.main-heading h2{ font-size: 25px;}
+	.reservations-btn p{ line-height: 23px; margin: 0 0 10px;}
+
+	.caption.style-1{ width: 100%;}
+	.facts-lsit ul li{ width: 100%; border: 0;}
+
+	.blog-detail .figure-holder .figure-title{ padding: 10px;}
+	.blog-gallery-slider .figure-title h3{ font-size: 10px; margin: 0;}
+	.figure-title .blog-meta{ margin: 0;}
+	.figure-title .blog-meta li{ font-size: 12px; margin: 0 10px 0 0;}
+
+	.nh-post-details{ padding: 20px;}
+	.nh-post-details h3{ margin: 0 0 10px;}
+	.nh-post-details p{ font-size: 14px;}
+	.nh-post-details .blog-meta li{ font-size: 12px; margin: 0 10px 0 0;}
+	.qoute-1{ padding: 20px; font-size: 16px;}
+
+	.qoute-2{ padding: 20px;}
+	.qoute-2 i{ padding: 8px; font-size: 15px; top: -10px; left: 0;	}
+	.qoute-2 q{ font-size: 16px;}
+	.blog-detail .nh-post .features li{ width: 100%;}
+	.share-artical{ text-align: center;}
+	.share-artical .social-icons{ float: none!important; display: inline-block;}
+	.share-artical .head{ float: none!important;}
+
+	.nh-auther-holder { position: relative; overflow: visible; margin-top: 90px;}
+	.nh-auther-holder .figure-holder { position: absolute; top: -65px; left: 50%; margin: 0 0 0 -60px;}
+	.nh-auther-holder .auther-info { overflow: visible; }
+	.nh-auther-holder {padding-top: 80px;}
+	.nh-comments .comment { position: relative; padding-top: 80px; margin-top: 80px;}
+	.comment .author-img { position: absolute; left: 50%; top: -55px; margin: 0 0 0 -50px; }
+	.comment-box > span { font-size: 12px; }
+	.shop-full-width .col-md-3.col-xs-4.xs-full-width { width: 50%; }
+	.view-option p,
+	.sort-by li { font-size: 14px; margin: 0 10px 0 0;}
+	.sort-by li .form-control {width: 80px;}
+	.nh-comments .child{ padding: 0 0 0 50px;}
+	.figure-holder > img{ width: 100%;}
+
+	.recipe-video iframe{ height: 190px;}
+
+	.recipe-details h3{ font-size: 18px;}
+
+	.single-product-detail h3{ font-size: 18px;} 
+
+	.item-details{ padding: 20px; min-width: 93%;}
+	.item-details ul li h5{ font-size: 10px;}
+	.item-details ul li h5 img{ margin: 0 5px 0 0;}
+
+	.menu-overlay-wrap .figure-hover .content h3{ font-size: 18px; margin: 0;}
+	.menu-overlay-wrap .figure-hover p{ font-size: 14px; margin: 0 0 10px;}
+	.tp-caption.style-2 h1 {font-size: 24px;} 
+	.tp-caption .btn { height: 28px!important; line-height: 28px!important; font-size: 10px!important}
+}
+
+@media (max-width: 359px) {
+	.full-width-360{ width: 100%;}
+	.booking-form h3{ font-size: 18px;}
+	.flicker-img ul{ width: 100%;}
+	.booking-form-holder.style-2 .booking-form{ width: 100%;}
+
+	.recipe-video iframe{ height: 170px;}
+	.sort-by li .form-control{ width: 110px;}
+
+	.add-cart-alert{ text-align: center;}
+	.add-cart-alert p{ float: none;}
+	.add-cart-alert .btn{ float: none!important;}
+	.tp-caption p{display: none;}
+	
+}
+@media (max-width: 320px) {
+	.item-details{ padding: 20px; min-width: 90%;}
+}

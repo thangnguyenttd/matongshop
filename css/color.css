@@ -1,0 +1,91 @@
+/*  Theme Color */
+a:hover,
+.phone-numbers ul li i,
+.social-icons ul li a,
+.main-heading h2,
+.name-price span,
+.client-name,
+.footer-widget h3,
+.working-hours ul li strong,
+.adress-list li i,
+.social-icons-s li a:hover,
+.sub-footer p span,
+.sepcial-product-detail .price,
+.about-services .service-icon,
+.banner-content h3,
+.menu-list .masonry-grid > h3,
+.menu-grid .detail h3,
+.menu-grid .detail span,
+.menu-overlay .item-details h3,
+.item-details ul li span,
+.price,
+.nh-message h2,
+.nh-contact .form-group i,
+.nh-info.font ul li i,
+.nh-info .timing h4,
+.nh-widget h3,
+.social-widget .social-icons-s li a,
+.facts-lsit ul li h2,
+.ingrediants li::before,
+.add-cart-alert p i,
+.availability strong
+{ color: #71bf44;} 
+
+/* Theme Backgroung Color */
+.btn.green,
+.gallery-hover a,
+.date-batch,
+.menu-item.special-offer::before,
+.newslatter,
+.figure-hover .content a,
+.nh-widget h3 i,
+.owl-dots .owl-dot.active,
+.tags-widget ul li a,
+.qoute-1,
+.sec-heading,
+.list-categories li.active a,
+.list-categories li a:hover,
+.nh-tabs .nav-tabs li.active a,
+.social-icons ul li a:hover,
+.navigation > ul > li > a::before,
+.gallery-figure .overlay .item,
+.wrap .overlay a.link,
+.product-directions ul li span,
+.progressbar > span,
+.slick-arrow,
+.pagination-holder ul li a,
+.pagination-holder ul li a:hover,
+.testimonail-slider .slick-dots li.slick-active,
+.reply,
+.scrollup,
+.about-services li:hover .service-icon
+{ background: #71bf44;}
+
+/* Theme Border Color */
+.nh-filterbale-nav ul li a::before,
+.nh-filterbale-nav ul li a:hover::before,
+.about-services .service-icon,
+.owl-dots .owl-dot.active,
+.list-categories li.active a,
+.list-categories li a:hover,
+.add-cart-alert,
+.testimonail-slider .slick-dots li.slick-active,
+.about-services li:hover .service-icon
+{ border-color: #71bf44;}
+
+/* THeme Basic Rgba */
+.gallery-hover,
+.news-column:hover .overlay,
+.menu-item-img .overlay,
+.menu-grid .menu-img .overlay,
+.figure-hover,
+.owl-dots .owl-dot,
+.navigation li ul li a:hover,
+.navigation li ul li.active a,
+
+
+.wrap.style-2 .overlay,
+.wrap.style-1 .overlay::before,
+.wrap.style-1 .overlay::after
+{ background: rgba( 0,0,0,0.5);}
+
