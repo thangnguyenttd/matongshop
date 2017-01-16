@@ -7,19 +7,25 @@
     <title></title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <link rel="stylesheet" href="plugins/owl.carousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="plugins/owl.carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.theme.default.min.css">
 
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css"/>
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/color.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/transition.css">
+
+    <link rel="stylesheet" href="plugins/rev-slider/css/settings.css">
+
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,6 +35,24 @@
     <![endif]-->
   </head>
   <body ng-controller="MainController">
+
+    <!-- Preloader -->
+    <div id="status" style="display: none;">
+        <div id="preloader" style="display: none;">
+            <div class="position-center-center">
+                <img src="images/logo-2.png" alt="">
+                <div class="loader">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader -->
+
     <!-- Wrapper -->
     <div class="wrapper push" style="right: 0px; transition: right 400ms ease;">
 
@@ -197,12 +221,15 @@
         <!-- Header -->
 
         <!-- slider starts -->
-        <div style="position:relative;width:100%;height:auto;margin-top:0px;margin-bottom:0px" class="forcefullwidth_wrapper_tp_banner"><div class="tp-banner-container" style="left: 0px; position: absolute; width: 1287px; max-height: none; overflow: visible; height: 678px;">
-            <div id="tp-banner-2" class="tp-banner revslider-initialised tp-simpleresponsive hovered" style="background-color: rgba(0, 0, 0, 0); background-image: none; height: 100%; max-height: none;">
-                <ul style="display: block; overflow: hidden; width: 100%; height: 100%; max-height: none;">
+
+
+        <div class="forcefullwidth_wrapper_tp_banner">
+          <div class="tp-banner-container">
+            <div id="tp-banner-2" class="tp-banner">
+                <ul>
 
                     <!-- SLIDE  -->
-                    <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-thumb="images/slider/img-01.jpg" data-saveperformance="off" data-title="Slide" class="" style="width: 100%; height: 100%; overflow: hidden; visibility: visible; left: 0px; top: 0px; z-index: 18; opacity: 1; position: absolute;">
+                    <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-thumb="images/slider/img-01.jpg" data-saveperformance="off" data-title="Slide" class="">
                         <!-- MAIN IMAGE -->
                         <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="center top" data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" data-lazydone="undefined" src="images/slider/img-01.jpg" data-src="images/slider/img-01.jpg" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;images/slider/img-01.jpg&quot;); background-size: cover; background-position: center top; width: 100%; height: 100%; opacity: 0;"></div></div>
                         <!-- LAYERS -->
@@ -222,7 +249,7 @@
                     </li>
 
                     <!-- SLIDE  -->
-                    <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-thumb="images/slider/img-02.jpg" data-saveperformance="off" data-title="Slide" class="current-sr-slide-visible" style="width: 100%; height: 100%; overflow: hidden; visibility: visible; left: 0px; top: 0px; z-index: 20; opacity: 1; position: absolute;">
+                    <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-thumb="images/slider/img-02.jpg" data-saveperformance="off" data-title="Slide" class="current-sr-slide-visible">
                         <!-- MAIN IMAGE -->
                         <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="center top" data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" data-lazydone="undefined" src="images/slider/img-02.jpg" data-src="images/slider/img-02.jpg" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;images/slider/img-02.jpg&quot;); background-size: cover; background-position: center top; width: 100%; height: 100%; opacity: 1;"></div></div>
                         <!-- LAYERS -->
@@ -242,7 +269,7 @@
                     </li>
 
                     <!-- SLIDE  -->
-                    <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-thumb="images/slider/img-03.jpg" data-saveperformance="off" data-title="Slide" class="" style="width: 100%; height: 100%; overflow: hidden; visibility: visible; left: 0px; top: 0px; opacity: 1; z-index: 18; position: absolute;">
+                    <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-thumb="images/slider/img-03.jpg" data-saveperformance="off" data-title="Slide" class="">
                         <!-- MAIN IMAGE -->
                         <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="center top" data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" data-lazydone="undefined" src="images/slider/img-03.jpg" data-src="images/slider/img-03.jpg" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;images/slider/img-03.jpg&quot;); background-size: cover; background-position: center top; width: 100%; height: 100%; opacity: 0;"></div></div>
                         <!-- LAYERS -->
@@ -262,8 +289,8 @@
                     </li>
 
                 </ul>
-            <div class="tp-loader spinner0" style="display: none;"><div class="dot1"></div><div class="dot2"></div><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><div class="tp-bannertimer" style="visibility: visible; width: 28.1714%;"></div></div>
-        <div style="position: absolute; top: 339px; margin-top: -50px; left: 0px;" class="tp-leftarrow tparrows default preview1"><div class="tp-arr-allwrapper"><div class="tp-arr-iwrapper"><div class="tp-arr-imgholder" style="visibility: inherit; opacity: 1; background-image: url(&quot;images/slider/img-01.jpg&quot;);"></div><div class="tp-arr-imgholder2"></div><div class="tp-arr-titleholder">Slide</div><div class="tp-arr-subtitleholder"></div></div></div></div><div style="position: absolute; top: 339px; margin-top: -50px; right: 0px;" class="tp-rightarrow tparrows default preview1"><div class="tp-arr-allwrapper"><div class="tp-arr-iwrapper"><div class="tp-arr-imgholder" style="visibility: inherit; opacity: 1; background-image: url(&quot;images/slider/img-03.jpg&quot;);"></div><div class="tp-arr-imgholder2"></div><div class="tp-arr-titleholder">Slide</div><div class="tp-arr-subtitleholder"></div></div></div></div></div><div class="tp-fullwidth-forcer" style="width: 100%; height: 678px;"></div></div>
+            </div>
+        </div>
         <!-- slider starts -->
 
         <!-- Main Content -->
@@ -288,7 +315,7 @@
                         <!-- About Img -->
                         <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6 full-width-640">
                             <div class="about-img">
-                                <iframe src="./Food Cafe, Restaurant, Hotel, Multipurpose HTML5 Template_files/25349367.html"></iframe>
+                                <img src="images/sepcial-offers/img-01.jpg" alt="">
                             </div>
                         </div>
                         <!-- About Img -->
@@ -314,6 +341,7 @@
 
             <!-- Our Special Offer -->
             <section class="parallax-window nh-padding overlay-dark offer-parralax" data-parallax="scroll" data-image-src="images/parallax-bg/img-05.jpg">
+
                 <div class="container">
 
                     <!-- Main Heading -->
@@ -326,99 +354,72 @@
                     <!-- Main Heading -->
 
                     <!-- Sepcial Offers Products -->
-                    <div id="sepcial-ofer-slider" class="sepcial-ofer-slider slick-initialized slick-slider"><button type="button" data-role="none" class="slick-prev slick-arrow slick-disabled" aria-label="Previous" role="button" aria-disabled="true" style="display: block;"></button>
+                    <div id="sepcial-ofer-slider" class="sepcial-ofer-slider">
 
+                      <div class="item">
+                          <div class="sepcial-product wrap style-1">
+                              <div class="sepcial-product-img nh-hover">
+                                  <img src="images/sepcial-offers/img-01.jpg" alt="">
+                                  <div class="overlay">
+                                      <a class="btn sm green item" href="http://bach2.com/nh-studeo/foodcafe/cart.html" tabindex="0">Add TO cart</a>
+                                  </div>
+                              </div>
+                              <div class="sepcial-product-detail">
+                                  <h4>SCOTCH EGGS</h4>
+                                  <div>
+                                      <ul class="rating-stars">
+                                          <li><i class="fa fa-star"></i>
+                                          </li>
+                                          <li><i class="fa fa-star"></i>
+                                          </li>
+                                          <li><i class="fa fa-star"></i>
+                                          </li>
+                                          <li><i class="fa fa-star"></i>
+                                          </li>
+                                          <li><i class="fa fa-star-half-o"></i>
+                                          </li>
+                                      </ul>
+                                  </div>
+                                  <strong class="price">12$</strong>
+                              </div>
+                          </div>
+                      </div>
 
+                      <div class="item">
+                          <div class="sepcial-product wrap style-1">
+                              <div class="sepcial-product-img">
+                                  <img src="images/sepcial-offers/img-02.jpg" alt="">
+                                  <div class="overlay">
+                                      <a class="btn sm green item" href="http://bach2.com/nh-studeo/foodcafe/cart.html" tabindex="0">Add TO cart</a>
+                                  </div>
+                              </div>
+                              <div class="sepcial-product-detail">
+                                  <h4>SCOTCH EGGS</h4>
+                                  <div>
+                                      <ul class="rating-stars">
+                                          <li><i class="fa fa-star"></i>
+                                          </li>
+                                          <li><i class="fa fa-star"></i>
+                                          </li>
+                                          <li><i class="fa fa-star"></i>
+                                          </li>
+                                          <li><i class="fa fa-star"></i>
+                                          </li>
+                                          <li><i class="fa fa-star-half-o"></i>
+                                          </li>
+                                      </ul>
+                                  </div>
+                                  <strong class="price">12$</strong>
+                              </div>
+                          </div>
+                      </div>
 
-
-
-                    <div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 1465px; transform: translate3d(0px, 0px, 0px);"><div class="item slick-slide slick-current slick-active" tabindex="-1" role="option" aria-describedby="slick-slide00" style="width: 263px;" data-slick-index="0" aria-hidden="false">
-                            <div class="sepcial-product wrap style-1">
-                                <div class="sepcial-product-img nh-hover">
-                                    <img src="images/img-01(1).jpg" alt="">
-                                    <div class="overlay">
-                                        <a class="btn sm green item" href="http://bach2.com/nh-studeo/foodcafe/cart.html" tabindex="0">Add TO cart</a>
-                                    </div>
-                                </div>
-                                <div class="sepcial-product-detail">
-                                    <h4>SCOTCH EGGS</h4>
-                                    <div>
-                                        <ul class="rating-stars">
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star-half-o"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <strong class="price">12$</strong>
-                                </div>
-                            </div>
-                        </div><div class="item slick-slide slick-active" tabindex="-1" role="option" aria-describedby="slick-slide01" style="width: 263px;" data-slick-index="1" aria-hidden="false">
-                            <div class="sepcial-product wrap style-1">
-                                <div class="sepcial-product-img">
-                                    <img src="images/img-02.jpg" alt="">
-                                    <div class="overlay">
-                                        <a class="btn sm green item" href="http://bach2.com/nh-studeo/foodcafe/cart.html" tabindex="0">Add TO cart</a>
-                                    </div>
-                                </div>
-                                <div class="sepcial-product-detail">
-                                    <h4>SCOTCH EGGS</h4>
-                                    <div>
-                                        <ul class="rating-stars">
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star-half-o"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <strong class="price">12$</strong>
-                                </div>
-                            </div>
-                        </div><div class="item slick-slide slick-active" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 263px;" data-slick-index="2" aria-hidden="false">
-                            <div class="sepcial-product wrap style-1">
-                                <div class="sepcial-product-img">
-                                    <img src="images/img-03(1).jpg" alt="">
-                                    <div class="overlay">
-                                        <a class="btn sm green item" href="http://bach2.com/nh-studeo/foodcafe/cart.html" tabindex="0">Add TO cart</a>
-                                    </div>
-                                </div>
-                                <div class="sepcial-product-detail">
-                                    <h4>SCOTCH EGGS</h4>
-                                    <div>
-                                        <ul class="rating-stars">
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star-half-o"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <strong class="price">12$</strong>
-                                </div>
-                            </div>
-                        </div><div class="item slick-slide slick-active" tabindex="-1" role="option" aria-describedby="slick-slide03" style="width: 263px;" data-slick-index="3" aria-hidden="false">
+                      <div class="item">
                             <div class="sepcial-product wrap style-1">
                                 <div class="sepcial-product-img">
-                                    <img src="images/img-04.jpg" alt="">
+                                    <img src="images/sepcial-offers/img-03.jpg" alt="">
                                     <div class="overlay">
-                                        <a class="btn sm green item" href="http://bach2.com/nh-studeo/foodcafe/cart.html" tabindex="0">Add TO cart</a>
+                                        <a class="btn sm green item" href="cart.html" tabindex="0">Add TO cart</a>
                                     </div>
                                 </div>
                                 <div class="sepcial-product-detail">
@@ -440,34 +441,65 @@
                                     <strong class="price">12$</strong>
                                 </div>
                             </div>
-                        </div><div class="item slick-slide" tabindex="-1" role="option" aria-describedby="slick-slide04" style="width: 263px;" data-slick-index="4" aria-hidden="true">
-                            <div class="sepcial-product wrap style-1">
-                                <div class="sepcial-product-img">
-                                    <img src="images/img-02.jpg" alt="">
-                                    <div class="overlay">
-                                        <a class="btn sm green item" href="http://bach2.com/nh-studeo/foodcafe/cart.html" tabindex="-1">Add TO cart</a>
+                        </div>
+
+                        <div class="item">
+                              <div class="sepcial-product wrap style-1">
+                                  <div class="sepcial-product-img">
+                                      <img src="images/sepcial-offers/img-04.jpg" alt="">
+                                      <div class="overlay">
+                                          <a class="btn sm green item" href="cart.html" tabindex="0">Add TO cart</a>
+                                      </div>
+                                  </div>
+                                  <div class="sepcial-product-detail">
+                                      <h4>SCOTCH EGGS</h4>
+                                      <div>
+                                          <ul class="rating-stars">
+                                              <li><i class="fa fa-star"></i>
+                                              </li>
+                                              <li><i class="fa fa-star"></i>
+                                              </li>
+                                              <li><i class="fa fa-star"></i>
+                                              </li>
+                                              <li><i class="fa fa-star"></i>
+                                              </li>
+                                              <li><i class="fa fa-star-half-o"></i>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                      <strong class="price">12$</strong>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="item">
+                                <div class="sepcial-product wrap style-1">
+                                    <div class="sepcial-product-img">
+                                        <img src="images/sepcial-offers/img-02.jpg" alt="">
+                                        <div class="overlay">
+                                            <a class="btn sm green item" href="cart.html" tabindex="-1">Add TO cart</a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="sepcial-product-detail">
-                                    <h4>SCOTCH EGGS</h4>
-                                    <div>
-                                        <ul class="rating-stars">
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star-half-o"></i>
-                                            </li>
-                                        </ul>
+                                    <div class="sepcial-product-detail">
+                                        <h4>SCOTCH EGGS</h4>
+                                        <div>
+                                            <ul class="rating-stars">
+                                                <li><i class="fa fa-star"></i>
+                                                </li>
+                                                <li><i class="fa fa-star"></i>
+                                                </li>
+                                                <li><i class="fa fa-star"></i>
+                                                </li>
+                                                <li><i class="fa fa-star"></i>
+                                                </li>
+                                                <li><i class="fa fa-star-half-o"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <strong class="price">12$</strong>
                                     </div>
-                                    <strong class="price">12$</strong>
                                 </div>
                             </div>
-                        </div></div></div><button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;" aria-disabled="false"></button></div>
+                    </div>
                     <!-- Sepcial Offers Products -->
 
                 </div>
@@ -510,49 +542,49 @@
                     <div id="filter-masonry" class="gallery-masonary section-padding-top" style="position: relative; height: 494px;">
                         <div class="masonry-grid xs-full-width col-xs-6 full-width-360 Option-2" style="position: absolute; left: 0px; top: 0px;">
                             <figure class="gallery-figure wrap style-1">
-                                <img src="images/img-01(2).jpg" alt="">
+                                <img src="images/gallery-v2/img-01.jpg" alt="">
                                 <figcaption class="overlay">
-                                    <a class="fa fa-search item" href="images/img-01(2).jpg" data-rel="prettyPhoto" rel="prettyPhoto"></a>
+                                    <a class="fa fa-search item" href="images/gallery-v2/img-01.jpg" data-rel="prettyPhoto" rel="prettyPhoto"></a>
                                 </figcaption>
                             </figure>
                         </div>
                         <div class="masonry-grid xs-full-width col-xs-3 full-width-360 Option-3" style="position: absolute; left: 575px; top: 0px;">
                             <figure class="gallery-figure wrap style-1">
-                                <img src="images/img-02(1).jpg" alt="">
+                                <img src="images/gallery-v2/img-02.jpg" alt="">
                                 <figcaption class="overlay">
-                                    <a class="fa fa-search item" href="images/img-02(1).jpg" data-rel="prettyPhoto" rel="prettyPhoto"></a>
+                                    <a class="fa fa-search item" href="images/gallery-v2/img-02.jpg" data-rel="prettyPhoto" rel="prettyPhoto"></a>
                                 </figcaption>
                             </figure>
                         </div>
                         <div class="masonry-grid xs-full-width col-xs-3 full-width-360 Option-4" style="position: absolute; left: 862px; top: 0px;">
                             <figure class="gallery-figure wrap style-1">
-                                <img src="images/img-03(2).jpg" alt="">
+                                <img src="images/gallery-v2/img-03.jpg" alt="">
                                 <figcaption class="overlay">
-                                    <a class="fa fa-search item" href="images/img-03(2).jpg" data-rel="prettyPhoto" rel="prettyPhoto"></a>
+                                    <a class="fa fa-search item" href="images/gallery-v2/img-03.jpg" data-rel="prettyPhoto" rel="prettyPhoto"></a>
                                 </figcaption>
                             </figure>
                         </div>
                         <div class="masonry-grid xs-full-width col-xs-3 full-width-360 Option-1" style="position: absolute; left: 0px; top: 247px;">
                             <figure class="gallery-figure wrap style-1">
-                                <img src="images/img-04(1).jpg" alt="">
+                                <img src="images/gallery-v2/img-04.jpg" alt="">
                                 <figcaption class="overlay">
-                                    <a class="fa fa-search item" href="images/img-04(1).jpg" data-rel="prettyPhoto" rel="prettyPhoto"></a>
+                                    <a class="fa fa-search item" href="images/gallery-v2/img-04.jpg" data-rel="prettyPhoto" rel="prettyPhoto"></a>
                                 </figcaption>
                             </figure>
                         </div>
                         <div class="masonry-grid xs-full-width col-xs-3 full-width-360 Option-5" style="position: absolute; left: 287px; top: 247px;">
                             <figure class="gallery-figure wrap style-1">
-                                <img src="images/img-05(1).jpg" alt="">
+                                <img src="images/gallery-v2/img-05.jpg" alt="">
                                 <figcaption class="overlay">
-                                    <a class="fa fa-search item" href="images/img-05(1).jpg" data-rel="prettyPhoto" rel="prettyPhoto"></a>
+                                    <a class="fa fa-search item" href="images/gallery-v2/img-05.jpg" data-rel="prettyPhoto" rel="prettyPhoto"></a>
                                 </figcaption>
                             </figure>
                         </div>
                         <div class="masonry-grid xs-full-width col-xs-6 full-width-360 Option-2" style="position: absolute; left: 575px; top: 247px;">
                             <figure class="gallery-figure wrap style-1">
-                                <img src="images/img-06.jpg" alt="">
+                                <img src="images/gallery-v2/img-06.jpg" alt="">
                                 <figcaption class="overlay">
-                                    <a class="fa fa-search item" href="images/img-06.jpg" data-rel="prettyPhoto" rel="prettyPhoto"></a>
+                                    <a class="fa fa-search item" href="images/gallery-v2/img-06.jpg" data-rel="prettyPhoto" rel="prettyPhoto"></a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -577,28 +609,12 @@
                     <!-- Main Heading -->
 
                     <!-- Team Slider -->
-                    <div id="team-slider" class="team-slider slick-initialized slick-slider">
+                    <div id="team-slider" class="team-slider">
 
-                        <!-- Team Figure -->
-
-                        <!-- Team Figure -->
-
-                        <!-- Team Figure -->
-
-                        <!-- Team Figure -->
-
-                        <!-- Team Figure -->
-
-                        <!-- Team Figure -->
-
-                        <!-- Team Figure -->
-
-                        <!-- Team Figure -->
-
-                    <div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 1172px; transform: translate3d(0px, 0px, 0px);"><div class="item slick-slide slick-current slick-active" tabindex="-1" role="option" aria-describedby="slick-slide10" style="width: 263px;" data-slick-index="0" aria-hidden="false">
+                        <div class="item">
                             <div class="team-column wrap style-2">
                                 <div class="thumb-holder">
-                                    <img src="images/img-01(3).jpg" alt="">
+                                    <img src="images/team2/img-01.jpg" alt="">
                                     <div class="overlay">
                                         <a class="btn green sm position-center-center item" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#" tabindex="0">View All</a>
                                     </div>
@@ -627,10 +643,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div><div class="item slick-slide slick-active" tabindex="-1" role="option" aria-describedby="slick-slide11" style="width: 263px;" data-slick-index="1" aria-hidden="false">
+                        </div>
+                        <div class="item">
                             <div class="team-column wrap style-2">
                                 <div class="thumb-holder">
-                                    <img src="images/img-02(2).jpg" alt="">
+                                    <img src="images/team2/img-02.jpg" alt="">
                                     <div class="overlay">
                                         <a class="btn green sm position-center-center item" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#" tabindex="0">View All</a>
                                     </div>
@@ -659,10 +676,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div><div class="item slick-slide slick-active" tabindex="-1" role="option" aria-describedby="slick-slide12" style="width: 263px;" data-slick-index="2" aria-hidden="false">
+                        </div>
+                        <div class="item">
                             <div class="team-column wrap style-2">
                                 <div class="thumb-holder">
-                                    <img src="images/img-03(3).jpg" alt="">
+                                    <img src="images/team2/img-03.jpg" alt="">
                                     <div class="overlay">
                                         <a class="btn green sm position-center-center item" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#" tabindex="0">View All</a>
                                     </div>
@@ -691,10 +709,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div><div class="item slick-slide slick-active" tabindex="-1" role="option" aria-describedby="slick-slide13" style="width: 263px;" data-slick-index="3" aria-hidden="false">
+                        </div>
+                        <div class="item">
                             <div class="team-column wrap style-2">
                                 <div class="thumb-holder">
-                                    <img src="images/img-04(2).jpg" alt="">
+                                    <img src="images/team2/img-04.jpg" alt="">
                                     <div class="overlay">
                                         <a class="btn green sm position-center-center item" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#" tabindex="0">View All</a>
                                     </div>
@@ -723,7 +742,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div></div></div></div>
+                        </div>
+                      </div>
                     <!-- Team Slider -->
 
                 </div>
@@ -937,29 +957,29 @@
 
                     <!-- Testimonial -->
                     <div class="testimonial" role="toolbar">
-                        <ul id="testimonail-slider" class="testimonail-slider slick-initialized slick-slider slick-dotted">
-                            <div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 3510px;"><li class="slick-slide" data-slick-index="0" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide20" style="width: 1140px; position: relative; left: 0px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms linear;">
+                        <ul id="testimonail-slider" class="testimonail-slider">
+                            <li class="slick-slide">
                                 <div class="client-say">
-                                    <span class="client-img"><img src="images/img-01(4).jpg" alt=""></span>
+                                    <span class="client-img"><img src="images/client-img/img-01.jpg" alt=""></span>
                                     <blockquote>If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes, muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</blockquote>
                                     <span class="client-name">- food inc, New York</span>
                                 </div>
-                            </li><li class="slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide21" style="width: 1140px; position: relative; left: -1170px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms linear;">
+                            </li>
+                            <li class="slick-slide">
                                 <div class="client-say">
-                                    <span class="client-img"><img src="images/img-01(4).jpg" alt=""></span>
+                                    <span class="client-img"><img src="images/client-img/img-01.jpg" alt=""></span>
                                     <blockquote>If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes, muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</blockquote>
                                     <span class="client-name">- food inc, New York</span>
                                 </div>
-                            </li><li class="slick-slide slick-current slick-active" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide22" style="width: 1140px; position: relative; left: -2340px; top: 0px; z-index: 999; opacity: 1;">
+                            </li>
+                            <li class="slick-slide">
                                 <div class="client-say">
-                                    <span class="client-img"><img src="images/img-01(4).jpg" alt=""></span>
+                                    <span class="client-img"><img src="images/client-img/img-01.jpg" alt=""></span>
                                     <blockquote>If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes, muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</blockquote>
                                     <span class="client-name">- food inc, New York</span>
                                 </div>
-                            </li></div></div>
-
-
-                        <ul class="slick-dots" style="display: inline-block;" role="tablist"><li class="" aria-hidden="true" role="presentation" aria-selected="true" aria-controls="navigation20" id="slick-slide20"></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation21" id="slick-slide21" class=""></li><li aria-hidden="false" role="presentation" aria-selected="false" aria-controls="navigation22" id="slick-slide22" class="slick-active"></li></ul></ul>
+                            </li>
+                        </ul>
                     </div>
                     <!-- Testimonial -->
 
@@ -991,7 +1011,7 @@
                                     <!-- News Img -->
                                     <div class="col-lg-6 col-md-6 col-xs-12">
                                         <figure class="news-img">
-                                            <img src="images/img-01(5).jpg" alt="">
+                                            <img src="images/latest-news-2/img-01.jpg" alt="">
                                             <div class="date-batch">
                                                 <strong>02</strong>
                                                 <span>feb</span>
@@ -1031,7 +1051,7 @@
                                     <!-- News Img -->
                                     <div class="col-lg-6 col-md-6 col-xs-12">
                                         <figure class="news-img">
-                                            <img src="images/img-02(3).jpg" alt="">
+                                            <img src="images/latest-news-2/img-02.jpg" alt="">
                                             <div class="date-batch">
                                                 <strong>02</strong>
                                                 <span>feb</span>
@@ -1129,27 +1149,27 @@
                                 <h3>Recent Work</h3>
                                 <ul>
                                     <li>
-                                        <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img class="animate fadeInUp" data-wow-delay="0.2s" src="images/img-01(6).jpg" alt="img-01" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                                        <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img class="animate fadeInUp" data-wow-delay="0.2s" src="images/flicker-img/img-01.jpg" alt="img-01" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img class="animate fadeInUp" data-wow-delay="0.4s" src="images/img-02(4).jpg" alt="img-02" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                                        <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img class="animate fadeInUp" data-wow-delay="0.4s" src="images/flicker-img/img-02.jpg" alt="img-02" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img class="animate fadeInUp" data-wow-delay="0.6s" src="images/img-03(4).jpg" alt="img-03" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                                        <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img class="animate fadeInUp" data-wow-delay="0.6s" src="images/flicker-img/img-03.jpg" alt="img-03" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img class="animate fadeInUp" data-wow-delay="0.8s" src="images/img-04(3).jpg" alt="img-04" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
+                                        <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img class="animate fadeInUp" data-wow-delay="0.8s" src="images/flicker-img/img-04.jpg" alt="img-04" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img class="animate fadeInUp" data-wow-delay="1s" src="images/img-05(2).jpg" alt="img-05" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
+                                        <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img class="animate fadeInUp" data-wow-delay="1s" src="images/flicker-img/img-05.jpg" alt="img-05" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img class="animate fadeInUp" data-wow-delay="1.2s" src="images/img-06(1).jpg" alt="img-06" style="visibility: visible; animation-delay: 1.2s; animation-name: fadeInUp;">
+                                        <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img class="animate fadeInUp" data-wow-delay="1.2s" src="images/flicker-img/img-06.jpg" alt="img-06" style="visibility: visible; animation-delay: 1.2s; animation-name: fadeInUp;">
                                         </a>
                                     </li>
                                 </ul>
@@ -1205,17 +1225,160 @@
     </div>
     <!-- Wrapper -->
 
+    <!-- back To Button -->
+    <span id="scrollup" class="scrollup cd-is-visible"><i class="fa fa-angle-up"></i></span>
+    <!-- back To Button -->
+
+    <!-- responsive nav -->
+    <nav class="menu-panel" id="res-menu" style="position: fixed; top: 0px; bottom: 0px; height: 100%; right: -280px; width: 280px;">
+        <div class="logo-holder">
+            <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img src="images/footer-logo.png" alt="">
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a data-toggle="collapse" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#list-1"><i class="fa fa-angle-down pull-right"></i>Home</a>
+                <ul class="collapse sub-list" id="list-1">
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/index-1.html">Home 1</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/index-2.html">Home 2</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/index-3.html">Home 3</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/index-4.html">Home 4</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a data-toggle="collapse" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#list-2"><i class="fa fa-angle-down pull-right"></i>about</a>
+                <ul class="collapse sub-list" id="list-2">
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/about.html">about 1</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/about-2.html">about 2</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a data-toggle="collapse" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#list-3"><i class="fa fa-angle-down pull-right"></i>menu</a>
+                <ul class="collapse sub-list" id="list-3">
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/menu-list.html">menu list</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/menu-grid.html">menu grid</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/menu-overlay.html">menu overlay</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/menu-title.html">menu title</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a data-toggle="collapse" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#list-4"><i class="fa fa-angle-down pull-right"></i>recipe</a>
+                <ul class="collapse sub-list" id="list-4">
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/recipe-2-col.html">recipe 2 col</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/recipe-3-col.html">recipe 3 col</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/recipe-4-col.html">recipe 4 col</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/recipe-single-image.html">recipe single image</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/recipe-single-gallery.html">recipe single gallery</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/recipe-single-video.html">recipe single video</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a data-toggle="collapse" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#list-5"><i class="fa fa-angle-down pull-right"></i>blog</a>
+                <ul class="collapse sub-list" id="list-5">
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/blog-left-sidebar.html">blog left sidebar</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/blog-right-sidebar.html">blog right sidebar</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/blog-full-width.html">blog detail full width</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/blog-detail-image.html">blog detail image</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/blog-detail-gallery.html">blog detail gallery</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/blog-detail-video.html">blog detail video</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a data-toggle="collapse" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#list-6"><i class="fa fa-angle-down pull-right"></i>Shop</a>
+                <ul class="collapse sub-list" id="list-6">
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/shop-full.html">shop</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/shop-detail.html">shop detail</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/shop-left-sidebar.html">shop left sidebar</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/shop-right-sidebar.html">shop right sidebar</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/shop-account.html">shop account</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/cart.html">shop cart</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/checkout.html">shop checkout</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a data-toggle="collapse" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#list-7"><i class="fa fa-angle-down pull-right"></i>pages</a>
+                <ul class="collapse sub-list" id="list-7">
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/contact.html">contact</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/reservations.html">reservations</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/reservations-opentable.html">reservations opentable</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/404.html">404</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/comming-soon.html">comming soon</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/faq.html">faq</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- responsive nav -->
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
+    <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
+    <script src="js/jquery.js"></script>
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <script src="js/angular.min.js"></script><!-- load angular -->
+    <script src="bower_components/angular/angular.min.js"></script><!-- load angular -->
 
-    <script src="plugins/owl.carousel/owl.carousel.min.js"></script>
+    <script src="bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+
+    <script src="js/modernizr.js"></script>
+
+    <script src="bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/clockpicker.js"></script>
+    <!-- <script src="js/contact-form.js"></script> -->
+    <script src="js/parallax.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/countTo.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/prettyPhoto.js"></script>
+    <script src="js/isotope.pkgd.js"></script>
+    <script src="js/wow-min.js"></script>
+    <script src="js/big-slide.js"></script>
+    <script src="js/build-page.js"></script>
 
     <script src="js/database.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+    <script src="plugins/rev-slider/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="plugins/rev-slider/js/jquery.themepunch.revolution.min.js"></script>
 
   </body>
 </html>
