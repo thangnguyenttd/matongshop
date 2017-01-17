@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="vi" ng-app="shopapp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css"/>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/transition.css">
+
+    <link rel="stylesheet" href="plugins/rev-slider/css/settings.css">
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body ng-controller="MainController">
+
+    <!-- Preloader -->
+    <div id="status">
+        <div id="preloader">
+            <div class="position-center-center">
+                <img src="images/logo-2.png" alt="">
+                <div class="loader">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader -->
+
+    <!-- Wrapper -->
+    <div class="wrapper push" style="right: 0px; transition: right 400ms ease;">
+
+      <header class="header" ng-controller="HeaderController">
+          <!-- Top Bar -->
+          <div class="top-bar">
+              <div class="container">
+
+                  <!-- Left Top Bar -->
+                  <div class="phone-numbers pull-left">
+                      <ul>
+                          <li ng-repeat="menu in top_menu_left"><a href="{{menu.href}}"><i class="{{menu.iconCls}}"></i>{{menu.title}}</a></li>
+                          <li>
+                              <div class="search-bar">
+                                  <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#search"><i class="fa fa-search"></i></a>
+                                  <div id="search" class="search-modal">
+                                      <form role="search" class="position-center-center" id="searchform" action="http://bach2.com/search" method="get">
+                                          <input value="" name="q" type="search" placeholder="type to search">
+                                      </form>
+                                  </div>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+                  <!-- Left Top Bar -->
+
+                  <!-- Social Icons -->
+                  <div class="social-icons pull-right">
+                      <ul>
+                          <li ng-repeat="menu in top_menu_right"><a href="{{menu.href}}"><i class="{{menu.iconCls}}"></i>{{menu.title}}</a></li>
+                      </ul>
+                  </div>
+                  <!-- Social Icons -->
+
+              </div>
+          </div>
+          <!-- Top Bar -->
+
+          <!-- Nav -->
+          <nav class="nav-holder">
+              <div class="container">
+                  <div class="p-relative">
+
+                      <!-- Logo -->
+                      <div class="logo">
+                          <a href="#"><img src="images/logo.png" alt="">
+                          </a>
+                      </div>
+                      <!-- Logo -->
+
+                      <!-- Search -->
+                      <div class="search-bar pull-right">
+                          <a href="#search"><i class="fa fa-search"></i></a>
+                          <!-- Search Form -->
+                          <div id="search" class="search-modal">
+                              <form role="search" class="position-center-center" id="searchform" action="/search" method="get">
+                                  <input value="" name="q" type="search" placeholder="type to search">
+                              </form>
+                          </div>
+                      </div>
+                      <!-- Search -->
+
+                      <!-- Navigarion -->
+                      <div class="navigation style-1">
+                          <ul class="nh-nav">
+                            <li ng-repeat="menu in menus">
+                              <a href="{{menu.href}}">{{menu.title}}</a>
+                              <ul ng-if="menu.hasSub">
+                                <li ng-repeat="submenu in menu.subItems"><a href="{{submenu.href}}">{{submenu.title}}</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                          <a href="#res-menu" class="menu-ico"><i class="fa fa-bars"></i></a>
+                      </div>
+                      <!-- Navigarion -->
+
+                  </div>
+              </div>
+          </nav>
+          <!-- Nav -->
+
+      </header>
+
+      <!-- inner bannner -->
+      <div class="inner-banner nh-padding" data-parallax="scroll" data-image-src="images/inner-banner.jpg">
+          <div class="container">
+              <div class="banner-content">
+                  <h3>shop full</h3>
+                  <ul class="bread-crums">
+                      <li><a href="#">Home</a>
+                      </li>
+                      <li><a href="#">shop full</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <!-- inner banner -->
+      <!-- Main Content -->
+      <main class="main-content" ng-controller="ShopController">
+
+          <!-- Shop Grid -->
+          <div class="shop-full-width nh-padding">
+              <div class="container">
+
+                  <!-- Main Heading -->
+                  <div class="row">
+                      <div class="col-sm-12">
+                          <div class="main-heading-holder">
+                              <div class="main-heading left-style">
+                                  <h2>shop</h2>
+                                  <span>Our rates are reasonable</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Main Heading -->
+
+                  <!-- Filter Options -->
+                  <div class="product-filter">
+                      <div class="row">
+                          <div class="col-xs-6 full-width-640 text-center">
+                              <div class="view-option">
+                                  <p>Showing 1-9 of 58 results</p>
+                                  <ul>
+                                      <li>
+                                          <a class="fa fa-list" href="#"></a>
+                                      </li>
+                                      <li>
+                                          <a class="fa fa-th-large" href="#"></a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="col-xs-6 full-width-640 text-center">
+                              <div class="sort-by">
+                                  <ul>
+                                      <li>SORT BY</li>
+                                      <li>
+                                          <select class="form-control">
+                                              <option>1</option>
+                                              <option>2</option>
+                                              <option>3</option>
+                                              <option>4</option>
+                                              <option>5</option>
+                                          </select>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Filter Options -->
+
+                  <!-- Proucts -->
+                  <div class="products-grid">
+                      <div class="row">
+
+                          <!-- product -->
+                          <div class="col-lg-3 col-md-4 col-xs-6 full-width-480" ng-repeat="row in products">
+                              <div class="product-holder wrap style-2">
+                                  <div class="figure-holder">
+                                      <img src="{{row.imageUrl}}" alt="">
+                                      <div class="overlay">
+                                          <a class="btn green sm position-center-center item" href="shop-detail.html">
+                                              <i class="fa fa-shopping-cart"></i>
+                                          </a>
+                                      </div>
+                                  </div>
+                                  <div class="inner-detail">
+                                      <h3 class="product-name"><a href="shop_detail.html">{{row.name}}</a></h3>
+                                      <strong class="price" ng-if="row.sale_price > 0"><span>{{row.regular_price}} VND</span> {{row.price}} VND</strong>
+                                      <strong class="price" ng-if="row.sale_price <= 0">{{row.price}} VND</strong>
+                                      <ul class="rating-stars">
+                                          <li><i class="fa fa-star"></i>
+                                          </li>
+                                          <li><i class="fa fa-star"></i>
+                                          </li>
+                                          <li><i class="fa fa-star"></i>
+                                          </li>
+                                          <li><i class="fa fa-star"></i>
+                                          </li>
+                                          <li><i class="fa fa-star"></i>
+                                          </li>
+                                      </ul>
+                                      <p class="m-0">{{row.description}}</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- product -->
+
+                          <!-- Pagination -->
+                          <div class="col-xs-12">
+                              <div class="pagination-holder">
+                                  <ul class="pagination">
+                                      <li><a href="#">1</a>
+                                      </li>
+                                      <li><a href="#">2</a>
+                                      </li>
+                                      <li><a href="#">3</a>
+                                      </li>
+                                      <li><a href="#">4</a>
+                                      </li>
+                                      <li><a href="#">5</a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <!-- Pagination -->
+
+                      </div>
+                  </div>
+                  <!-- Proucts -->
+
+              </div>
+          </div>
+          <!-- Shop Grid -->
+
+          <!-- Newslatter -->
+          <div class="newslatter">
+              <div class="container">
+                  <p>stay Always Updated With us. Sign in with our newsletter</p>
+                  <div class="subcribe">
+                      <input type="text" class="form-control" placeholder="Type Here">
+                      <a class="fa fa-paper-plane" href="#"></a>
+                  </div>
+              </div>
+          </div>
+          <!-- Newslatter -->
+
+      </main>
+      <!-- Main Content -->
+
+      <!-- Footer -->
+      <footer class="footer">
+
+          <!-- Footer Columns -->
+          <div class="nh-padding">
+              <div class="container">
+                  <div class="row">
+
+                      <!-- Footer Widget -->
+                      <div class="col-lg-3 col-md-3 col-xs-6 full-width-640">
+                          <div class="footer-widget logo-widget">
+                              <img src="images/footer-logo.png" alt="">
+                              <span>The Test Of Good Food</span>
+                              <p>Presenting the most exclusive theme “FOODIN”. This theme is completely made by photoshop CC and illustrator CC with tried to follow UX roles and regulation. Also focused on the target user of restaurants who want to book a table or buy some healthy foods. </p>
+                          </div>
+                      </div>
+                      <!-- Footer Widget -->
+
+                      <!-- Footer Widget -->
+                      <div class="col-lg-3 col-md-3 col-xs-6 full-width-640">
+                          <div class="footer-widget working-hours">
+                              <h3>Working Hours</h3>
+                              <ul>
+                                  <li>
+                                      <strong><i class="fa fa-clock-o"></i>Monday To Friday</strong>
+                                      <p>8:00 am to 10:00 pm (Breakfast)</p>
+                                      <p>11:00am to 10:00pm (Lunch/Diner)</p>
+                                  </li>
+                                  <li>
+                                      <strong><i class="fa fa-clock-o"></i>Saturday &amp; Sunday</strong>
+                                      <p>10:00 am to 11:00 pm (Breakfast)</p>
+                                      <p>11:00 am to 12:00 pm (Lunch/Dinner)</p>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <!-- Footer Widget -->
+
+                      <!-- Footer Widget -->
+                      <div class="col-lg-3 col-md-3 col-xs-6 full-width-640">
+                          <div class="footer-widget flicker-img">
+                              <h3>Recent Work</h3>
+                              <ul>
+                                  <li>
+                                      <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img class="animate fadeInUp" data-wow-delay="0.2s" src="images/flicker-img/img-01.jpg" alt="img-01" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img class="animate fadeInUp" data-wow-delay="0.4s" src="images/flicker-img/img-02.jpg" alt="img-02" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img class="animate fadeInUp" data-wow-delay="0.6s" src="images/flicker-img/img-03.jpg" alt="img-03" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img class="animate fadeInUp" data-wow-delay="0.8s" src="images/flicker-img/img-04.jpg" alt="img-04" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img class="animate fadeInUp" data-wow-delay="1s" src="images/flicker-img/img-05.jpg" alt="img-05" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img class="animate fadeInUp" data-wow-delay="1.2s" src="images/flicker-img/img-06.jpg" alt="img-06" style="visibility: visible; animation-delay: 1.2s; animation-name: fadeInUp;">
+                                      </a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <!-- Footer Widget -->
+
+                      <!-- Footer Widget -->
+                      <div class="col-lg-3 col-md-3 col-xs-6 full-width-640">
+                          <div class="footer-widget adrress">
+                              <h3>Contact ifo</h3>
+                              <ul class="adress-list">
+                                  <li><i class="fa fa-map-marker"></i>732/21 Second Street, Manchester, King Street Kingston United Kingdom</li>
+                                  <li><i class="fa fa-phone"></i>+92 322 4303 425, +880 167 104 3098</li>
+                                  <li><i class="fa fa-envelope"></i>imi@foodin.com</li>
+                              </ul>
+                              <ul class="social-icons-s">
+                                  <li>
+                                      <a class="fa fa-facebook-square" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"></a>
+                                  </li>
+                                  <li>
+                                      <a class="fa fa-twitter-square" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"></a>
+                                  </li>
+                                  <li>
+                                      <a class="fa fa-pinterest-square" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"></a>
+                                  </li>
+                                  <li>
+                                      <a class="fa fa-linkedin-square" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"></a>
+                                  </li>
+                                  <li>
+                                      <a class="fa fa-google-plus-square" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"></a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <!-- Footer Widget -->
+
+                  </div>
+              </div>
+          </div>
+          <!-- Footer Columns -->
+
+          <!-- Sub Footer -->
+          <div class="sub-footer">
+              <p>Copyright © 2016 <span>NH Studio</span>
+              </p>
+          </div>
+          <!-- Sub Footer -->
+
+      </footer>
+      <!-- Footer -->
+
+
+    </div>
+    <!-- Wrapper -->
+
+    <!-- back To Button -->
+    <span id="scrollup" class="scrollup cd-is-visible"><i class="fa fa-angle-up"></i></span>
+    <!-- back To Button -->
+
+    <!-- responsive nav -->
+    <nav class="menu-panel" id="res-menu" style="position: fixed; top: 0px; bottom: 0px; height: 100%; right: -280px; width: 280px;">
+        <div class="logo-holder">
+            <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#"><img src="images/footer-logo.png" alt="">
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a data-toggle="collapse" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#list-1"><i class="fa fa-angle-down pull-right"></i>Home</a>
+                <ul class="collapse sub-list" id="list-1">
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/index-1.html">Home 1</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/index-2.html">Home 2</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/index-3.html">Home 3</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/index-4.html">Home 4</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a data-toggle="collapse" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#list-2"><i class="fa fa-angle-down pull-right"></i>about</a>
+                <ul class="collapse sub-list" id="list-2">
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/about.html">about 1</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/about-2.html">about 2</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a data-toggle="collapse" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#list-3"><i class="fa fa-angle-down pull-right"></i>menu</a>
+                <ul class="collapse sub-list" id="list-3">
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/menu-list.html">menu list</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/menu-grid.html">menu grid</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/menu-overlay.html">menu overlay</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/menu-title.html">menu title</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a data-toggle="collapse" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#list-4"><i class="fa fa-angle-down pull-right"></i>recipe</a>
+                <ul class="collapse sub-list" id="list-4">
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/recipe-2-col.html">recipe 2 col</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/recipe-3-col.html">recipe 3 col</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/recipe-4-col.html">recipe 4 col</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/recipe-single-image.html">recipe single image</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/recipe-single-gallery.html">recipe single gallery</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/recipe-single-video.html">recipe single video</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a data-toggle="collapse" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#list-5"><i class="fa fa-angle-down pull-right"></i>blog</a>
+                <ul class="collapse sub-list" id="list-5">
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/blog-left-sidebar.html">blog left sidebar</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/blog-right-sidebar.html">blog right sidebar</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/blog-full-width.html">blog detail full width</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/blog-detail-image.html">blog detail image</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/blog-detail-gallery.html">blog detail gallery</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/blog-detail-video.html">blog detail video</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a data-toggle="collapse" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#list-6"><i class="fa fa-angle-down pull-right"></i>Shop</a>
+                <ul class="collapse sub-list" id="list-6">
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/shop-full.html">shop</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/shop-detail.html">shop detail</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/shop-left-sidebar.html">shop left sidebar</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/shop-right-sidebar.html">shop right sidebar</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/shop-account.html">shop account</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/cart.html">shop cart</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/checkout.html">shop checkout</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a data-toggle="collapse" href="http://bach2.com/nh-studeo/foodcafe/home-2.html#list-7"><i class="fa fa-angle-down pull-right"></i>pages</a>
+                <ul class="collapse sub-list" id="list-7">
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/contact.html">contact</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/reservations.html">reservations</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/reservations-opentable.html">reservations opentable</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/404.html">404</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/comming-soon.html">comming soon</a>
+                    </li>
+                    <li><a href="http://bach2.com/nh-studeo/foodcafe/faq.html">faq</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- responsive nav -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
+    <script src="js/jquery.js"></script>
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="bower_components/angular/angular.min.js"></script><!-- load angular -->
+
+    <script src="bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+
+    <script src="js/modernizr.js"></script>
+
+    <script src="bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/clockpicker.js"></script>
+    <!-- <script src="js/contact-form.js"></script> -->
+    <script src="js/parallax.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/countTo.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/prettyPhoto.js"></script>
+    <script src="js/isotope.pkgd.js"></script>
+    <script src="js/wow-min.js"></script>
+    <script src="js/big-slide.js"></script>
+    <script src="js/build-page.js"></script>
+
+    <script src="js/database.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+    <script src="plugins/rev-slider/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="plugins/rev-slider/js/jquery.themepunch.revolution.min.js"></script>
+
+  </body>
+</html>

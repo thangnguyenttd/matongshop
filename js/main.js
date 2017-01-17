@@ -1,5 +1,5 @@
 //Start AngularJS
-
+// http://bach2.com/nh-studeo/foodcafe/contact.html
 (function () {
 
     var app = angular.module('shopapp', []);
@@ -7,9 +7,46 @@
 
     });
 
+
+    app.controller('HeaderController', function($scope, $http, $compile) {
+      $scope.menus = MENUS;
+      $scope.top_menu_left = TOP_MENU_LEFT;
+      $scope.top_menu_right = TOP_MENU_RIGHT;
+    });
+
+    app.controller('HomeController', function($scope, $http, $compile) {
+      $scope.special_offer = WIDGETS.special_offer;
+    });
+
+    app.controller('ShopController', function($scope, $http, $compile) {
+      $scope.products = PRODUCTS;
+
+      $scope.showPriceHtml = function(product){
+        if (product.sale_price > 0) {
+          return '<span>' + product.regular_price +' VND</span> ' + product.price + 'VND';
+        }else{
+          return product.price + 'VND';
+        }
+      }
+    });
+
+    app.controller('ShopDetailController', function($scope, $http, $compile) {
+      $scope.product = PRODUCTS[0];
+      $scope.related_products = WIDGETS.related_products;
+    });
+
+
+
     app.controller('MainController', function($scope, $http, $compile) {
+
+      $scope.fa_icon = function (icon) {
+        return "fa fa-" + icon;
+      };
+
         // render();
         function render(){
+
+
           //All product
           $scope.product = product;
 

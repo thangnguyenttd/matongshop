@@ -1,0 +1,79 @@
+<header class="header">
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+
+            <!-- Left Top Bar -->
+            <div class="phone-numbers pull-left">
+                <ul>
+                    <li ng-repeat="menu in top_menu_left"><a href="{{menu.href}}"><i class="{{menu.iconCls}}"></i>{{menu.title}}</a></li>
+                    <li>
+                        <div class="search-bar">
+                            <a href="http://bach2.com/nh-studeo/foodcafe/home-2.html#search"><i class="fa fa-search"></i></a>
+                            <div id="search" class="search-modal">
+                                <form role="search" class="position-center-center" id="searchform" action="http://bach2.com/search" method="get">
+                                    <input value="" name="q" type="search" placeholder="type to search">
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Left Top Bar -->
+
+            <!-- Social Icons -->
+            <div class="social-icons pull-right">
+                <ul>
+                    <li ng-repeat="menu in top_menu_right"><a href="{{menu.href}}"><i class="{{menu.iconCls}}"></i>{{menu.title}}</a></li>
+                </ul>
+            </div>
+            <!-- Social Icons -->
+
+        </div>
+    </div>
+    <!-- Top Bar -->
+
+    <!-- Nav -->
+    <nav class="nav-holder">
+        <div class="container">
+            <div class="p-relative">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="#"><img src="images/logo.png" alt="">
+                    </a>
+                </div>
+                <!-- Logo -->
+
+                <!-- Search -->
+                <div class="search-bar pull-right">
+                    <a href="#search"><i class="fa fa-search"></i></a>
+                    <!-- Search Form -->
+                    <div id="search" class="search-modal">
+                        <form role="search" class="position-center-center" id="searchform" action="/search" method="get">
+                            <input value="" name="q" type="search" placeholder="type to search">
+                        </form>
+                    </div>
+                </div>
+                <!-- Search -->
+
+                <!-- Navigarion -->
+                <div class="navigation style-1">
+                    <ul class="nh-nav">
+                      <li ng-repeat="menu in menus">
+                        <a href="{{menu.href}}">{{menu.title}}</a>
+                        <ul ng-if="menu.hasSub">
+                          <li ng-repeat="submenu in menu.subMenus"><a href="{{submenu.href}}">{{submenu.title}}</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <a href="#res-menu" class="menu-ico"><i class="fa fa-bars"></i></a>
+                </div>
+                <!-- Navigarion -->
+
+            </div>
+        </div>
+    </nav>
+    <!-- Nav -->
+
+</header>

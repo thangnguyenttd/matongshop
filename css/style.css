@@ -1218,3 +1218,11 @@ left: calc(50% - 20px)!important; top: calc(50% - 20px)!important;}
 /****** Responsive Menu  ***********************************************************
 *********************************************************** Responsive Menu ********/
 .nh-padding.menu-title-2 {padding-bottom: 50px;}
+
+.slick-dots button[data-role="none"] {
+    display: none;
+}
+
+.top-bar .search-bar a{
+  padding: 0 0;
+}
