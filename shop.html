@@ -9,6 +9,8 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog.min.css">
+    <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog-theme-default.min.css">
 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -103,6 +105,7 @@
                       </div>
                       <!-- Logo -->
 
+
                       <!-- Search -->
                       <div class="search-bar pull-right">
                           <a href="#search"><i class="fa fa-search"></i></a>
@@ -179,12 +182,13 @@
                                   <p>Showing 1-9 of 58 results</p>
                                   <ul>
                                       <li>
-                                          <a class="fa fa-list" href="#"></a>
+                                          <a class="fa fa-list" href="#list" ng-click="shop_show_type='list'"></a>
                                       </li>
                                       <li>
-                                          <a class="fa fa-th-large" href="#"></a>
+                                          <a class="fa fa-th-large" href="#grid" ng-click="shop_show_type='grid'"></a>
                                       </li>
                                   </ul>
+                                  <input type="hidden" data-ng-model="shop_show_type" ng-value="{{shop_show_type}}">
                               </div>
                           </div>
                           <div class="col-xs-6 full-width-640 text-center">
@@ -192,12 +196,9 @@
                                   <ul>
                                       <li>SORT BY</li>
                                       <li>
-                                          <select class="form-control">
-                                              <option>1</option>
-                                              <option>2</option>
-                                              <option>3</option>
-                                              <option>4</option>
-                                              <option>5</option>
+                                          <select class="form-control" value="name" data-ng-model="shop_sort_by" ng-value="{{name}}">
+                                              <option value="name">name</option>
+                                              <option value="price">price</option>
                                           </select>
                                       </li>
                                   </ul>
@@ -207,65 +208,138 @@
                   </div>
                   <!-- Filter Options -->
 
-                  <!-- Proucts -->
-                  <div class="products-grid">
-                      <div class="row">
+                  <div ng-if="shop_show_type == 'grid'" class="animate-if">
+                    <!-- Products -->
+                    <div class="products-grid">
+                        <div class="row">
 
-                          <!-- product -->
-                          <div class="col-lg-3 col-md-4 col-xs-6 full-width-480" ng-repeat="row in products">
-                              <div class="product-holder wrap style-2">
-                                  <div class="figure-holder">
-                                      <img src="{{row.imageUrl}}" alt="">
-                                      <div class="overlay">
-                                          <a class="btn green sm position-center-center item" href="shop-detail.html">
+                            <!-- product -->
+                            <div class="col-lg-3 col-md-4 col-xs-6 full-width-480" ng-repeat="row in products | orderBy:'-' + shop_sort_by ">
+                                <div class="product-holder wrap style-2">
+                                    <div class="figure-holder">
+                                        <img src="{{row.imageUrl}}" alt="">
+                                        <div class="overlay">
+                                          <a ng-if="getCartItemById(row.id) == false" class="btn green sm position-center-center item" data-id="{{row.id}}" data-name="{{row.name}}" data-price="{{row.price}}" data-quantity="1" ng-click="addToCart($event)">
+                                              <i class="fa fa-cart-plus"></i>
+                                          </a>
+                                          <a ng-if="getCartItemById(row.id) == true" class="btn btn-danger sm position-center-center item" data-id="{{row.id}}" ng-click="removeCartItem($event)">
                                               <i class="fa fa-shopping-cart"></i>
                                           </a>
-                                      </div>
-                                  </div>
-                                  <div class="inner-detail">
-                                      <h3 class="product-name"><a href="shop_detail.html">{{row.name}}</a></h3>
-                                      <strong class="price" ng-if="row.sale_price > 0"><span>{{row.regular_price}} VND</span> {{row.price}} VND</strong>
-                                      <strong class="price" ng-if="row.sale_price <= 0">{{row.price}} VND</strong>
-                                      <ul class="rating-stars">
-                                          <li><i class="fa fa-star"></i>
-                                          </li>
-                                          <li><i class="fa fa-star"></i>
-                                          </li>
-                                          <li><i class="fa fa-star"></i>
-                                          </li>
-                                          <li><i class="fa fa-star"></i>
-                                          </li>
-                                          <li><i class="fa fa-star"></i>
-                                          </li>
-                                      </ul>
-                                      <p class="m-0">{{row.description}}</p>
-                                  </div>
-                              </div>
-                          </div>
-                          <!-- product -->
+                                        </div>
+                                    </div>
+                                    <div class="inner-detail">
+                                        <h3 class="product-name"><a href="shop_detail.html">{{row.name}}</a></h3>
+                                        <strong class="price" ng-if="row.sale_price > 0"><span>{{row.regular_price}} VND</span> {{row.price}} VND</strong>
+                                        <strong class="price" ng-if="row.sale_price <= 0">{{row.price}} VND</strong>
+                                        <ul class="rating-stars">
+                                            <li><i class="fa fa-star"></i>
+                                            </li>
+                                            <li><i class="fa fa-star"></i>
+                                            </li>
+                                            <li><i class="fa fa-star"></i>
+                                            </li>
+                                            <li><i class="fa fa-star"></i>
+                                            </li>
+                                            <li><i class="fa fa-star"></i>
+                                            </li>
+                                        </ul>
+                                        <p class="m-0">{{row.description}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product -->
 
-                          <!-- Pagination -->
-                          <div class="col-xs-12">
-                              <div class="pagination-holder">
-                                  <ul class="pagination">
-                                      <li><a href="#">1</a>
-                                      </li>
-                                      <li><a href="#">2</a>
-                                      </li>
-                                      <li><a href="#">3</a>
-                                      </li>
-                                      <li><a href="#">4</a>
-                                      </li>
-                                      <li><a href="#">5</a>
-                                      </li>
-                                  </ul>
-                              </div>
-                          </div>
-                          <!-- Pagination -->
+                            <!-- Pagination -->
+                            <div class="col-xs-12">
+                                <div class="pagination-holder">
+                                    <ul class="pagination">
+                                        <li><a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a>
+                                        </li>
+                                        <li><a href="#">3</a>
+                                        </li>
+                                        <li><a href="#">4</a>
+                                        </li>
+                                        <li><a href="#">5</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Pagination -->
 
-                      </div>
+                        </div>
+                    </div>
+                    <!-- Proucts -->
                   </div>
-                  <!-- Proucts -->
+
+
+                  <div ng-if="shop_show_type == 'list'" class="animate-if">
+                    <!-- Products -->
+                    <div class="products-list">
+                        <div class="row">
+
+                            <!-- product -->
+                            <div class="col-lg-6 col-md-6 col-xs-6 full-width-480" ng-repeat="row in products">
+                                <div class="product-holder wrap style-2">
+                                    <div class="figure-holder pull-left">
+                                        <img src="{{row.imageUrl}}" alt="">
+                                        <div class="overlay">
+                                          <a ng-if="getCartItemById(row.id) == false" class="btn green sm position-center-center item" data-id="{{row.id}}" data-name="{{row.name}}" data-price="{{row.price}}" data-quantity="1" ng-click="addToCart($event)">
+                                              <i class="fa fa-cart-plus"></i>
+                                          </a>
+                                          <a ng-if="getCartItemById(row.id) == true" class="btn btn-danger sm position-center-center item" data-id="{{row.id}}" ng-click="removeCartItem($event)">
+                                              <i class="fa fa-shopping-cart"></i>
+                                          </a>
+                                        </div>
+                                    </div>
+                                    <div class="inner-detail pull-right">
+                                        <h3 class="product-name"><a href="shop_detail.html">{{row.name}}</a></h3>
+                                        <strong class="price" ng-if="row.sale_price > 0"><span>{{row.regular_price}} VND</span> {{row.price}} VND</strong>
+                                        <strong class="price" ng-if="row.sale_price <= 0">{{row.price}} VND</strong>
+                                        <ul class="rating-stars">
+                                            <li><i class="fa fa-star"></i>
+                                            </li>
+                                            <li><i class="fa fa-star"></i>
+                                            </li>
+                                            <li><i class="fa fa-star"></i>
+                                            </li>
+                                            <li><i class="fa fa-star"></i>
+                                            </li>
+                                            <li><i class="fa fa-star"></i>
+                                            </li>
+                                        </ul>
+                                        <p class="m-0">{{row.description}}</p>
+                                    </div>
+                                    <div class="clearfix border-style1"></div>
+                                </div>
+                            </div>
+                            <!-- product -->
+
+                            <!-- Pagination -->
+                            <div class="col-xs-12">
+                                <div class="pagination-holder">
+                                    <ul class="pagination">
+                                        <li><a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a>
+                                        </li>
+                                        <li><a href="#">3</a>
+                                        </li>
+                                        <li><a href="#">4</a>
+                                        </li>
+                                        <li><a href="#">5</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Pagination -->
+
+                        </div>
+                    </div>
+                    <!-- Proucts -->
+                  </div>
+
 
               </div>
           </div>
@@ -407,6 +481,13 @@
     </div>
     <!-- Wrapper -->
 
+    <!-- Mini cart -->
+    <div ng-click="showMiniCartDialog()">
+      <ngcart-summary></ngcart-summary>
+    </div>
+    <!-- Mini cart -->
+
+
     <!-- back To Button -->
     <span id="scrollup" class="scrollup cd-is-visible"><i class="fa fa-angle-up"></i></span>
     <!-- back To Button -->
@@ -536,6 +617,8 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <script src="bower_components/angular/angular.min.js"></script><!-- load angular -->
+    <script src="bower_components/ngcart/dist/ngCart.js"></script>
+    <script src="bower_components/ng-dialog/js/ngDialog.min.js"></script>
 
     <script src="bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
 

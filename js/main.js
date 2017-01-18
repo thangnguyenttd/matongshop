@@ -2,23 +2,31 @@
 // http://bach2.com/nh-studeo/foodcafe/contact.html
 (function () {
 
-    var app = angular.module('shopapp', []);
+    var app = angular.module('shopapp', ['ngCart','ngDialog']);
+
+    // app.config(['$routeProvider', function($routeProvider) {
+    //     $routeProvider.otherwise({
+    //         redirectTo: '/cart'
+    //     });
+    // }]);
     app.run(function($http) {
 
     });
 
 
-    app.controller('HeaderController', function($scope, $http, $compile) {
+
+    app.controller('HeaderController', ['$scope', '$http', 'ngCart', 'ngDialog', function($scope, $http, ngCart, ngDialog) {
       $scope.menus = MENUS;
       $scope.top_menu_left = TOP_MENU_LEFT;
       $scope.top_menu_right = TOP_MENU_RIGHT;
-    });
+    }]);
 
-    app.controller('HomeController', function($scope, $http, $compile) {
+    app.controller('HomeController', ['$scope', '$http', 'ngCart', 'ngDialog', function($scope, $http, ngCart, ngDialog) {
       $scope.special_offer = WIDGETS.special_offer;
-    });
+    }]);
 
-    app.controller('ShopController', function($scope, $http, $compile) {
+    app.controller('ShopController', ['$scope', '$http', 'ngCart', 'ngDialog', function($scope, $http, ngCart, ngDialog) {
+
       $scope.products = PRODUCTS;
 
       $scope.showPriceHtml = function(product){
@@ -28,20 +36,49 @@
           return product.price + 'VND';
         }
       }
-    });
+    }]);
 
-    app.controller('ShopDetailController', function($scope, $http, $compile) {
+    app.controller('ShopDetailController', ['$scope', '$http', 'ngCart', 'ngDialog', function($scope, $http, ngCart, ngDialog) {
       $scope.product = PRODUCTS[0];
       $scope.related_products = WIDGETS.related_products;
-    });
+    }]);
 
 
 
-    app.controller('MainController', function($scope, $http, $compile) {
+    app.controller('MainController', ['$scope', '$http', 'ngCart', 'ngDialog', function($scope, $http, ngCart, ngDialog) {
 
+      ngCart.setTaxRate(0);
+      ngCart.setShipping(0);
+
+      $scope.shop_show_type = 'grid';
       $scope.fa_icon = function (icon) {
         return "fa fa-" + icon;
       };
+
+      $scope.showMiniCartDialog = function(){
+        console.log('showMiniCartDialog')
+        ngDialog.open({
+            template: 'template/dialog-mini-cart.html',
+            className: 'ngdialog-theme-plain',
+            scope: $scope
+        });
+
+      }
+      $scope.addToCart = function(event){
+        var elm = angular.element(event.target);
+        var data = [];
+        ngCart.addItem(elm.data('id'), elm.data('name'), elm.data('price'), elm.data('quantity'));
+      }
+
+      $scope.removeCartItem = function(event){
+        var elm = angular.element(event.target);
+        ngCart.removeItemById(elm.data('id'));
+      }
+
+
+      $scope.getCartItemById = function(id){
+        return ngCart.getItemById(id) ? true : false;
+      }
 
         // render();
         function render(){
@@ -131,7 +168,7 @@
             }
 
         }
-    });
+    }]);
 
 })();
 

@@ -974,6 +974,7 @@ font-size: 12px;}
 
 /****** Shop Grid ***********************************************************
 *********************************************************** Shop Grid ******/
+.products-list .product-holder{ margin: 0 0 30px; border: 0;}
 .products-grid .product-holder{ margin: 0 0 30px; border: 1px solid #f5f5f5;}
 .product-filter{ margin: 0 0 30px;}
 
@@ -988,6 +989,15 @@ font-size: 12px;}
 .sort-by li{ float: left; margin: 0 30px 0 0; font-size: 15px; line-height: 40px;}
 .sort-by li:last-child{ margin: 0;}
 .sort-by li .form-control{ width: 140px; height: 40px;}
+
+.border-style1{border: 1px solid #ddd;}
+.products-list .row > .ng-scope{ margin-bottom: 15px;}
+.products-list .inner-detail { width: 70%; padding: 10px; text-align: left;}
+.products-list .inner-detail .product-name {font-size: 18px; margin: 0 0 7px;}
+.figure-holder { position: relative;}
+.products-list .figure-holder{width: 30%;}
+.products-list .figure-holder .rating-stars { position: absolute;left: 0; bottom: -10px; width: 100%; text-align: center;
+margin: 0; z-index: 10;}
 
 .products-grid .inner-detail { padding: 30px; text-align: center;}
 .products-grid .inner-detail .product-name {font-size: 18px; margin: 0 0 7px;}
@@ -1225,4 +1235,30 @@ left: calc(50% - 20px)!important; top: calc(50% - 20px)!important;}
 
 .top-bar .search-bar a{
   padding: 0 0;
+}
+.mini-cart {
+  position: fixed;
+  top: 50%;
+  right: 5px;
+  background: #4CAF50;
+  border: 1px solid green;
+  border-radius: 50% 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  box-shadow: 1px 2px 3px #737373;
+}
+.mini-cart:hover{
+  background: #4CAF50;
+}
+.mini-cart svg{
+  position: relative;
+  top: 15px;
+}
+
+.mini-cart span {
+    top: 10px;
+    color: #fff;
 }
