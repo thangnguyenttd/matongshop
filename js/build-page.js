@@ -4,8 +4,10 @@ jQuery(document).ready(function($) {
     $('.parallax-window').parallax();
 
     // ---------- Preloader ---------- //
-    jQuery("#status").delay(1000).fadeOut("slow");
-    jQuery("#preloader").delay(1000).fadeOut("slow");
+    jQuery("#status").hide();
+    jQuery("#preloader").hide();
+    // jQuery("#status").delay(1000).fadeOut("slow");
+    // jQuery("#preloader").delay(1000).fadeOut("slow");
     // ---------- Preloader ---------- //
 
     // ---------- Scroll Top Back ---------- //

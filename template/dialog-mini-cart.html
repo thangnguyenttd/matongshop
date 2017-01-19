@@ -1,6 +1,22 @@
 
 
-<div class="col-md-6">
+<div class="ngdialog-message">
+	<h2>Your cart</h2>
+	<div>
     <ng-pluralize count="ngCart.getTotalItems()" when="{1: 'item', 'other':'items'}"></ng-pluralize>
     <br />{{ ngCart.totalCost() | currency }}
+  </div>
+	<!-- <ul class="mt">
+		<li>Use it in controllers, factories or directives</li>
+		<li>Create your own directives</li>
+		<li>Style all UI and templates</li>
+		<li>Configure themes</li>
+		<li>Add animations and effects</li>
+	</ul> -->
+  <div class="" ng-repeat="item in cartItems">
+    {{item}}
+  </div>
+</div>
+<div class="ngdialog-buttons mt">
+	<button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="next()">►</button>
 </div>

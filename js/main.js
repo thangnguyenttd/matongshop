@@ -45,6 +45,10 @@
 
 
 
+    app.controller('DialogMiniCartController', ['$scope', '$http', 'ngCart', 'ngDialog', function($scope, $http, ngCart, ngDialog) {
+      $scope.cartItems = ngCart.getItems();
+    }]);
+
     app.controller('MainController', ['$scope', '$http', 'ngCart', 'ngDialog', function($scope, $http, ngCart, ngDialog) {
 
       ngCart.setTaxRate(0);
@@ -56,10 +60,12 @@
       };
 
       $scope.showMiniCartDialog = function(){
-        console.log('showMiniCartDialog')
+        console.log('showMiniCartDialog');
+
         ngDialog.open({
             template: 'template/dialog-mini-cart.html',
-            className: 'ngdialog-theme-plain',
+            controller: 'DialogMiniCartController',
+            className: 'ngdialog-theme-default ngdialog-theme-custom',
             scope: $scope
         });
 
